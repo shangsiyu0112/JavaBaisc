@@ -11,7 +11,6 @@ import java.util.Date;
  * @date 2020-05-21-13:05
  */
 public class testDate {
-
     @Test
     public void test01(){
         Date date = new Date();
@@ -41,5 +40,15 @@ public class testDate {
         String date = "20-5-21 下午4:08";
         Date date2 = dateFormat2.parse(date);
         System.out.println(date2);
+    }
+    @Test
+    public void testExcr() throws ParseException {
+        String birth = "2020-09-08";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = dateFormat.parse(birth);
+        System.out.println(date);
+        java.sql.Date date1 = new java.sql.Date(date.getTime());
+        System.out.println(date1);
+
     }
 }
