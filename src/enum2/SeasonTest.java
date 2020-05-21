@@ -27,7 +27,7 @@ class Season{
     private final String seasonDesc;
     //2.构造器私有化,因为每个常量对象都有各自的属性常量
     //常量赋值:显示赋值,构造器赋值(选择这个每个对象有自己的属性值),代码块赋值,
-    public Season(String seasonName,String seasonDesc) {
+    private Season(String seasonName,String seasonDesc) {
         //给属性赋值
         this.seasonName = seasonName;
         this.seasonDesc =seasonDesc;
